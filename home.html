@@ -1,25 +1,28 @@
 ﻿<script>
 <!--
-var arr = ['Саша', 'Марина', 'Ольга', 'Катя', 'Олег'];
-var name;
-var i;
-  name=prompt("Введите имя", "");
-  
-  
-  if (name=='Катя'){
-  alert('Катя, Вы успешно зашли!');
-  } else if (name=='Саша'){
-  alert('Саша, Вы успешно зашли!');
-  }else if (name=='Марина'){
-  alert('Марина, Вы успешно зашли!');
-  }else if (name=='Ольга'){
-  alert('Ольга, Вы успешно зашли!');
-  }else if (name=='Олег'){
-  alert('Олег, Вы успешно зашли!');
-  }else {
-  alert('Ошибка: пользователя с таким именем не существует!');
-  }
-	
+var i = 0;
+var arr = [];
+while (i<5){
+  arr[i] =  prompt('введите имя', name);
+    i++;
+}
+console.log(arr);
 
+  var admin;
+  admin=prompt("admin, введи свое имя", "");
+  console.log('admin', admin);
+  
+  var flag = 0;
+for(i=0;i<=5;i++)
+  if (admin==arr[i]) {
+  flag = 1;
+}
+  
+if (flag ==0){
+alert('Ошибка - таких имен нет');
+}
+else {
+alert('admin, ты успешно вошел!');
+}
 //-->
 </script>
